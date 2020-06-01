@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:text="어플 이름"
+        android:fontFamily="@font/nanumsquarer"
+        android:paddingTop="12dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="137dp"
+        android:paddingRight="136dp"
+        />
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/adver"
+        android:layout_width="match_parent"
+        android:layout_height="179dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:orientation="vertical">
+        <SearchView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+        <TextView
+            android:text="위치 | 서울 광진구"
+            android:textSize="16dp"
+            android:layout_marginLeft="29dp"
+            android:layout_marginTop="9dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="내 주변 확진자 이용 매장"
+                android:textSize="16dp"
+
+                android:fontFamily="@font/nanumsquarer"
+                android:textStyle="bold"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/visitStoreListMore"
+                android:text="더보기"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="80dp">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/visitStoreList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        
+    </LinearLayout>
+    
+    <FrameLayout
+        android:id="@+id/main_layout"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.google.android.material.bottomnavigation.ButtomNavigationView
+        android:id="@+id/bottomnavigationview"
+        android:layout_marginEnd="0dp"
+        />
+
+
+
+</LinearLayout>
